@@ -12,10 +12,10 @@ class Counter
          "'this' pointer does not match expected type.");
 
       ++value;
-   };
+   }
 
 public:
-   const auto& GetIncrementor()
+   const auto& GetIncrementor() const
    {
       static_assert(
          !std::is_same<decltype(this), const Counter*>::value,
